@@ -1,434 +1,338 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>About us</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Destino project">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles/about_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
-</head>
-<body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tour Template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
 
-<div class="super_container">
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	
-	<!-- Header -->
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 
-	<header class="header">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="header_container d-flex flex-row align-items-center justify-content-start">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
 
-						<!-- Logo -->
-						<div class="logo_container">
-							<div class="logo">
-								<div>destino</div>
-								<div>travel agency</div>
-								<div class="logo_image"><img src="images/logo.png" alt=""></div>
-							</div>
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	
+	<!-- Date Picker -->
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="colorlib-logo"><a href="index.html">Tour</a></div>
 						</div>
-
-						<!-- Main Navigation -->
-						<nav class="main_nav ml-auto">
-							<ul class="main_nav_list">
-								<li class="main_nav_item"><a href="index.html">Home</a></li>
-								<li class="main_nav_item active"><a href="#">About us</a></li>
-								<li class="main_nav_item"><a href="offers.html">Offers</a></li>
-								<li class="main_nav_item"><a href="news.html">News</a></li>
-								<li class="main_nav_item"><a href="contact.html">Contact</a></li>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="has-dropdown">
+									<a href="tours.html">Tours</a>
+									<ul class="dropdown">
+										<li><a href="#">Destination</a></li>
+										<li><a href="#">Cruises</a></li>
+										<li><a href="#">Hotels</a></li>
+										<li><a href="#">Booking</a></li>
+									</ul>
+								</li>
+								<li><a href="hotels.html">Hotels</a></li>
+								<li><a href="services.html">Services</a></li>
+								<li><a href="blog.html">Blog</a></li>
+								<li class="active"><a href="about.html">About</a></li>
+								<li><a href="contact.html">Contact</a></li>
 							</ul>
-						</nav>
-
-						<!-- Search -->
-						<div class="search">
-							<form action="#" class="search_form">
-								<input type="search" name="search_input" class="search_input ctrl_class" required="required" placeholder="Keyword">
-								<button type="submit" class="search_button ml-auto ctrl_class"><img src="images/search.png" alt=""></button>
-							</form>
 						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+			   	<li style="background-image: url(images/cover-img-5.jpg);">
+			   		<div class="overlay"></div>
+			   		<div class="container-fluid">
+			   			<div class="row">
+				   			<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+				   				<div class="slider-text-inner text-center">
+				   					<h2>by colorlib.com</h2>
+				   					<h1>About us</h1>
+				   				</div>
+				   			</div>
+				   		</div>
+			   		</div>
+			   	</li>
+			  	</ul>
+		  	</div>
+		</aside>
 
-						<!-- Hamburger -->
-						<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<div id="colorlib-about">
+			<div class="container">
+				<div class="row">
+					<div class="about-flex">
+						<div class="col-one-forth aside-stretch animate-box">
+							<div class="row">
+								<div class="col-md-12 about">
+									<h2>About</h2>
 
+									<ul>
+										<li><a href="#">History</a></li>
+										<li><a href="#">Staff</a></li>
+										<li><a href="#">Connect with us</a></li>
+										<li><a href="#">Faqs</a></li>
+										<li><a href="#">Career</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-three-forth animate-box">
+							<h2>History</h2>
+							<div class="row">
+								<div class="col-md-12">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+
+									<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+
+									<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+
+									<div class="row row-pb-sm">
+										<div class="col-md-6">
+											<img class="img-responsive" src="images/hotel-7.jpg" alt="">
+										</div>
+										<div class="col-md-6">
+											<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+											<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+										</div>
+									</div>
+
+
+									<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+
+									<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country.</p>
+
+									<p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</header>
 
-	<!-- Menu -->
-
-	<div class="menu_container menu_mm">
-
-		<!-- Menu Close Button -->
-		<div class="menu_close_container">
-			<div class="menu_close"></div>
-		</div>
-
-		<!-- Menu Items -->
-		<div class="menu_inner menu_mm">
-			<div class="menu menu_mm">
-				<div class="menu_search_form_container">
-					<form action="#" id="menu_search_form">
-						<input type="search" class="menu_search_input menu_mm">
-						<button id="menu_search_submit" class="menu_search_submit" type="submit"><img src="images/search_2.png" alt=""></button>
-					</form>
+		<div id="colorlib-testimony" class="colorlib-light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+						<h2>Our Satisfied Guests says</h2>
+						<p>We love to tell our successful far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					</div>
 				</div>
-				<ul class="menu_list menu_mm">
-					<li class="menu_item menu_mm"><a href="index.html">Home</a></li>
-					<li class="menu_item menu_mm"><a href="#">About us</a></li>
-					<li class="menu_item menu_mm"><a href="offers.html">Offers</a></li>
-					<li class="menu_item menu_mm"><a href="news.html">News</a></li>
-					<li class="menu_item menu_mm"><a href="contact.html">Contact</a></li>
-				</ul>
-
-				<!-- Menu Social -->
-				
-				<div class="menu_social_container menu_mm">
-					<ul class="menu_social menu_mm">
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li class="menu_social_item menu_mm"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-
-				<div class="menu_copyright menu_mm">Colorlib All rights reserved</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 animate-box">						
+						<div class="owl-carousel2">
+							<div class="item">
+								<div class="testimony text-center">
+									<span class="img-user" style="background-image: url(images/person1.jpg);"></span>
+									<span class="user">Alysha Myers</span>
+									<small>Miami Florida, USA</small>
+									<blockquote>
+										<p>" A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony text-center">
+									<span class="img-user" style="background-image: url(images/person2.jpg);"></span>
+									<span class="user">James Fisher</span>
+									<small>New York, USA</small>
+									<blockquote>
+										<p>One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+									</blockquote>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony text-center">
+									<span class="img-user" style="background-image: url(images/person3.jpg);"></span>
+									<span class="user">Jacob Webb</span>
+									<small>Athens, Greece</small>
+									<blockquote>
+										<p>Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
+									</blockquote>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
 			</div>
-
 		</div>
 
-	</div>
 	
-	<!-- Home -->
-
-	<div class="home">
-		<!-- Image by https://unsplash.com/@peecho -->
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/about_background.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="home_content">
-						<div class="home_content_inner">
-							<div class="home_title">About us</div>
-							<div class="home_breadcrumbs">
-								<ul class="home_breadcrumbs_list">
-									<li class="home_breadcrumb"><a href="index.html">Home</a></li>
-									<li class="home_breadcrumb">About us</li>
-								</ul>
+		<div id="colorlib-subscribe" style="background-image: url(images/img_bg_2.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center colorlib-heading animate-box">
+						<h2>Sign Up for a Newsletter</h2>
+						<p>Sign up for our mailing list to get latest updates and offers.</p>
+						<form class="form-inline qbstp-header-subscribe">
+							<div class="row">
+								<div class="col-md-12 col-md-offset-0">
+									<div class="form-group">
+										<input type="text" class="form-control" id="email" placeholder="Enter your email">
+										<button type="submit" class="btn btn-primary">Subscribe</button>
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>		
-	</div>
-
-	<!-- Find Form -->
-
-	<div class="find">
-		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="find_background_container prlx_parent">
-			<div class="find_background prlx" style="background-image:url(images/find.jpg)"></div>
-		</div>
-		<!-- <div class="find_background parallax-window" data-parallax="scroll" data-image-src="images/find.jpg" data-speed="0.8"></div> -->
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<div class="find_title text-center">Find the Adventure of a lifetime</div>
-				</div>
-				<div class="col-12">
-					<div class="find_form_container">
-						<form action="#" id="find_form" class="find_form d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-md-between justify-content-start flex-wrap">
-							<div class="find_item">
-								<div>Destination:</div>
-								<input type="text" class="destination find_input" required="required" placeholder="Keyword here">
-							</div>
-							<div class="find_item">
-								<div>Adventure type:</div>
-								<select name="adventure" id="adventure" class="dropdown_item_select find_input">
-									<option>Categories</option>
-									<option>Categories</option>
-									<option>Categories</option>
-								</select>
-							</div>
-							<div class="find_item">
-								<div>Min price</div>
-								<select name="min_price" id="min_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
-							<div class="find_item">
-								<div>Max price</div>
-								<select name="max_price" id="max_price" class="dropdown_item_select find_input">
-									<option>&nbsp;</option>
-									<option>Price</option>
-									<option>Price</option>
-								</select>
-							</div>
-							<button class="button find_button">Find</button>
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- About -->
-
-	<div class="about">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>We are an award winning Agency</h2>
-						<div>take a look at our story</div>
+		<footer id="colorlib-footer" role="contentinfo">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-3 colorlib-widget">
+						<h4>Tour Agency</h4>
+						<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+						<p>
+							<ul class="colorlib-social-icons">
+								<li><a href="#"><i class="icon-twitter"></i></a></li>
+								<li><a href="#"><i class="icon-facebook"></i></a></li>
+								<li><a href="#"><i class="icon-linkedin"></i></a></li>
+								<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							</ul>
+						</p>
 					</div>
-				</div>
-			</div>
-			<div class="row about_row">
-				<div class="col-lg-6 about_col order-lg-1 order-2">
-					<div class="about_content">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh. Aenean suscipit consequat lacus, sit amet mollis nulla. Morbi sagittis orci id lacus convallis tempus eget sit amet metus. Sed finibus, magna at euismod aliquet, enim justo vulputate lorem, sit amet elementum dolor eros sollicitudin dui. Sed ac magna mauris. Nullam lectus odio, viverra vel mi id, interdum imperdiet nulla. </p>
-						<div class="button about_button"><a href="#">Read More</a></div>
+					<div class="col-md-2 colorlib-widget">
+						<h4>Book Now</h4>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="#">Flight</a></li>
+								<li><a href="#">Hotels</a></li>
+								<li><a href="#">Tour</a></li>
+								<li><a href="#">Car Rent</a></li>
+								<li><a href="#">Beach &amp; Resorts</a></li>
+								<li><a href="#">Cruises</a></li>
+							</ul>
+						</p>
 					</div>
-				</div>
-				<div class="col-lg-6 about_col order-lg-2 order-1">
-					<div class="about_image">
-						<img src="images/about.jpg" alt="https://unsplash.com/@sanfrancisco">
+					<div class="col-md-2 colorlib-widget">
+						<h4>Top Deals</h4>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="#">Edina Hotel</a></li>
+								<li><a href="#">Quality Suites</a></li>
+								<li><a href="#">The Hotel Zephyr</a></li>
+								<li><a href="#">Da Vinci Villa</a></li>
+								<li><a href="#">Hotel Epikk</a></li>
+							</ul>
+						</p>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Milestones -->
-
-	<div class="milestones">
-		<div class="milestones_background parallax-window" data-parallax="scroll" data-image-src="images/fact_background.jpg" data-speed="0.8"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>Fun facts about our Agency</h2>
-						<div>take a look</div>
+					<div class="col-md-2">
+						<h4>Blog Post</h4>
+						<ul class="colorlib-footer-links">
+							<li><a href="#">The Ultimate Packing List For Female Travelers</a></li>
+							<li><a href="#">How These 5 People Found The Path to Their Dream Trip</a></li>
+							<li><a href="#">A Definitive Guide to the Best Dining and Drinking Venues in the City</a></li>
+						</ul>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<div class="milestones_text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis. Quisque vel est id justo faucibus dapibus id a nibh</p>
-					</div>
-				</div>
-					
-			</div>
-			<div class="row milestones_container">
 
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone text-center">
-						<div class="milestone_icon"><img src="images/milestone_1.svg" alt=""></div>
-						<div class="milestone_counter" data-end-value="17">0</div>
-						<div class="milestone_text">Mountains Climbed</div>
-					</div>
-				</div>
-
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone text-center">
-						<div class="milestone_icon"><img src="images/milestone_2.svg" alt=""></div>
-						<div class="milestone_counter" data-end-value="213">0</div>
-						<div class="milestone_text">Islands Visited</div>
-					</div>
-				</div>
-
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone text-center">
-						<div class="milestone_icon"><img src="images/milestone_3.svg" alt=""></div>
-						<div class="milestone_counter" data-end-value="11923">0</div>
-						<div class="milestone_text">Photos Taken</div>
-					</div>
-				</div>
-
-				<!-- Milestone -->
-				<div class="col-lg-3 milestone_col">
-					<div class="milestone text-center">
-						<div class="milestone_icon"><img src="images/milestone_4.svg" alt=""></div>
-						<div class="milestone_counter" data-end-value="15">0</div>
-						<div class="milestone_text">Cruises Organized</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Services -->
-
-	<div class="services">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="section_title text-center">
-						<h2>Popular services that we offer</h2>
-						<div>take a look at these offers</div>
-					</div>
-				</div>
-			</div>
-			<div class="row icon_box_container">
-
-				<!-- Icon Box -->
-				<div class="col-lg-4 icon_box_col">
-					<div class="icon_box">
-						<div class="icon_box_image"><img src="images/service_1.svg" class="svg" alt="https://www.flaticon.com/authors/monkik"></div>
-						<div class="icon_box_title">Weekend trips</div>
-						<p class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis.</p>
-						<a href="#" class="icon_box_more">Read More</a>
-					</div>
-				</div>
-
-				<!-- Icon Box -->
-				<div class="col-lg-4 icon_box_col">
-					<div class="icon_box">
-						<div class="icon_box_image"><img src="images/service_2.svg" class="svg" alt="https://www.flaticon.com/authors/monkik"></div>
-						<div class="icon_box_title">Fun leisure trips</div>
-						<p class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis.</p>
-						<a href="#" class="icon_box_more">Read More</a>
-					</div>
-				</div>
-
-				<!-- Icon Box -->
-				<div class="col-lg-4 icon_box_col">
-					<div class="icon_box">
-						<div class="icon_box_image"><img src="images/service_3.svg" class="svg" alt="https://www.flaticon.com/authors/monkik"></div>
-						<div class="icon_box_title">Plane tickets</div>
-						<p class="icon_box_text">Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce fringilla lectus nec diam auctor, ut fringilla diam sagittis.</p>
-						<a href="#" class="icon_box_more">Read More</a>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<!-- Image by https://unsplash.com/@garciasaldana_ -->
-		<div class="newsletter_background" style="background-image:url(images/newsletter.jpg)"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					<div class="newsletter_content">
-						<div class="newsletter_title text-center">Subscribe to our Newsletter</div>
-						<div class="newsletter_form_container">
-							<form action="#" id="newsletter_form" class="newsletter_form">
-								<div class="d-flex flex-md-row flex-column align-content-center justify-content-between">
-									<input type="email" id="newsletter_input" class="newsletter_input" placeholder="Your E-mail Address">
-									<button type="submit" id="newsletter_button" class="newsletter_button">Subscribe</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
-
-				<!-- Footer Column -->
-				<div class="col-lg-4 footer_col">
-					<div class="footer_about">
-						<!-- Logo -->
-						<div class="logo_container">
-							<div class="logo">
-								<div>destino</div>
-								<div>travel agency</div>
-								<div class="logo_image"><img src="images/logo.png" alt=""></div>
-							</div>
-						</div>
-						<div class="footer_about_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pulvinar sed mauris eget tincidunt. Sed lectus nulla, tempor vel eleifend quis, tempus rut rum metus. Pellentesque ultricies enim eu quam fermentum hendrerit.</div>
-						<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
-					</div>
-				</div>
-
-				<!-- Footer Column -->
-				<div class="col-lg-4 footer_col">
-					<div class="footer_latest">
-						<div class="footer_title">Latest News</div>
-						<div class="footer_latest_content">
-
-							<!-- Footer Latest Post -->
-							<div class="footer_latest_item">
-								<div class="footer_latest_image"><img src="images/latest_1.jpg" alt="https://unsplash.com/@peecho"></div>
-								<div class="footer_latest_item_content">
-									<div class="footer_latest_item_title"><a href="news.html">Brazil Summer</a></div>
-									<div class="footer_latest_item_date">Jan 09, 2018</div>
-								</div>
-							</div>
-
-							<!-- Footer Latest Post -->
-							<div class="footer_latest_item">
-								<div class="footer_latest_image"><img src="images/latest_2.jpg" alt="https://unsplash.com/@sanfrancisco"></div>
-								<div class="footer_latest_item_content">
-									<div class="footer_latest_item_title"><a href="news.html">A perfect vacation</a></div>
-									<div class="footer_latest_item_date">Jan 09, 2018</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-				<!-- Footer Column -->
-				<div class="col-lg-4 footer_col">
-					<div class="tags footer_tags">
-						<div class="footer_title">Tags</div>
-						<ul class="tags_content d-flex flex-row flex-wrap align-items-start justify-content-start">
-							<li class="tag"><a href="#">travel</a></li>
-							<li class="tag"><a href="#">summer</a></li>
-							<li class="tag"><a href="#">cruise</a></li>
-							<li class="tag"><a href="#">beach</a></li>
-							<li class="tag"><a href="#">offer</a></li>
-							<li class="tag"><a href="#">vacation</a></li>
-							<li class="tag"><a href="#">trip</a></li>
-							<li class="tag"><a href="#">city break</a></li>
-							<li class="tag"><a href="#">adventure</a></li>
+					<div class="col-md-3 col-md-push-1">
+						<h4>Contact Information</h4>
+						<ul class="colorlib-footer-links">
+							<li>291 South 21th Street, <br> Suite 721 New York NY 10016</li>
+							<li><a href="tel://1234567920">+ 1235 2355 98</a></li>
+							<li><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
+							<li><a href="#">yoursite.com</a></li>
 						</ul>
 					</div>
 				</div>
-
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<p>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart2" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span> 
+							<span class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="http://pexels.com/" target="_blank">Pexels.com</a></span>
+						</p>
+					</div>
+				</div>
 			</div>
-		</div>
-	</footer>
-</div>
+		</footer>
+	</div>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="styles/bootstrap4/popper.js"></script>
-<script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/greensock/TweenMax.min.js"></script>
-<script src="plugins/greensock/TimelineMax.min.js"></script>
-<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="plugins/greensock/animation.gsap.min.js"></script>
-<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
-<script src="plugins/parallax-js-master/parallax.min.js"></script>
-<script src="js/about_custom.js"></script>
-</body>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Date Picker -->
+	<script src="js/bootstrap-datepicker.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
 </html>
+
