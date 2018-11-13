@@ -877,6 +877,8 @@ h1, h2, h3, h4, h5, h6, figure {
   display: block; }
 
 .text-salebox {
+  padding-left: center;
+  padding-right: center;
   display: table;
   width: 100%; }
   .text-salebox .text-lefts {
@@ -1722,6 +1724,20 @@ input[type="text"] {
       background: #FFDD00;
       color: #000;
       border: 1px solid #FFDD00; }
+.btn-reduc {
+  margin-right: 450px;
+  background: #ffdd00;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 4px 4px; }
+  .btn-reduc::selection{
+  background-color: #FFFFFF;
+  color: white;}
 
 .btn {
   margin-right: 4px;
