@@ -38,6 +38,16 @@
 				                      <input type="date" id="dateArrivee" class="form-control date" placeholder="Date d'arrivée">
 				                    </div>
 				                  </div>
+												</div>
+												<div class="col-md-12">
+				                  <div class="form-group">
+				                    <label for="vehicule">Vous avez un véhicule ?</label>
+				                    <div class="form-field">				                      
+															<!--<input type="radio" id="vehicule" class="form-control radio-inline" placeholder="Date d'arrivée">-->
+															<label>Non</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="0" checked>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+															<label>Oui</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="1">
+				                    </div>
+				                  </div>
 				                </div>
 				                <div class="col-md-12">
 				                  <input type="submit" name="submit" id="submit" value="Trouver un trajet !" class="btn btn-primary btn-block">

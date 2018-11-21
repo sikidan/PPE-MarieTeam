@@ -420,7 +420,7 @@
 								<div class="text-rights">
 									<h3 class="title">Pour votre premier voyage !</h3>
 									<p>Nous vous offrons 25% de reduction avec le code suivant</p>
-									<p class="btn-reduc"><strong>MT2018</strong></p>
+									<p class="btn-reduc"><strong>&nbsp;&nbsp;MT2018&nbsp;&nbsp;</strong></p>
 								</div>
 							</div>
 						</div>
