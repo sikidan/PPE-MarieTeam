@@ -76,7 +76,8 @@
 			   		</div>
 			   	</li>			
 			  	</ul>
-		  	</div>--><div id="colorlib-intro" class="intro-img" style="background-image: url(images/cover-img-1.jpg);" data-stellar-background-ratio="0.5">
+              </div>-->
+            <div id="colorlib-intro" class="intro-img" style="background-image: url(images/cover-img-1.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
 				<div class="row">
@@ -103,8 +104,7 @@
 						<div class="row">
 							<div class="wrap-division">
 								<div class="col-md-6 col-sm-6 animate-box">
-									<div class="hotel-entry">
-										
+									<div class="hotel-entry">										
 										<div class="desc">
 											<h3><p>Connexion</p></h3>
                                             <form method="POST" action="">

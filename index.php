@@ -221,18 +221,18 @@
 				              	<div class="row">
 				              	 <div class="col-md-3">
 				              	 	<div class="form-group">
-				                    <label for="date">Port de départ</label>
+				                    <label for="portDepart">Port de départ</label>
 				                    <div class="form-field">
-				                      <input type="text" id="location" class="form-control" placeholder="D'ou partez-vous ?">
+				                      <input type="text" id="portDepart" class="form-control" placeholder="D'ou partez-vous ?">
 				                    </div>
 				                  </div>
 				              	 </div>
 				                <div class="col-md-2">
 				                  <div class="form-group">
-				                    <label for="date">Date de départ</label>
+				                    <label for="dateDepart">Date de départ</label>
 				                    <div class="form-field">
 				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Date de départ">
+				                      <input type="text" id="datetDepart" class="form-control date" placeholder="Date de départ">
 				                    </div>
 				                  </div>
 				                </div>
