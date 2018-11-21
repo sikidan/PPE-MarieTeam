@@ -419,26 +419,6 @@ h1, h2, h3, h4, h5, h6, figure {
 				}
 			}
 		}
-		//test à supprimer : 
-		.slides-login {
-			position: relative;
-			overflow: hidden;
-			li {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center center;
-				height: 150px;
-				position: relative;
-				.overlay{
-					position: absolute;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					background: rgba($brand-black,.3);
-				}
-			}
-		}
 		.flex-control-nav {
 			bottom: 5em;
 			z-index: 1000;

@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Accueil - MarieTeam</title>
+	<title>Connexion/Inscription - MarieTeam</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -67,11 +67,11 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="index.html">MarieTeam</a></div>
+							<div id="colorlib-logo"><a href="index.php">MarieTeam</a></div>
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="index.html">Accueil</a></li>
+								<li class="active"><a href="index.php">Accueil</a></li>
 								<li class="has-dropdown">
 									<a href="tours.html">Nos offres</a>
 									<ul class="dropdown">
@@ -91,11 +91,11 @@
 				</div>
 			</div>
 		</nav>
-		<aside id="colorlib-hero">
-			<div class="flexslider">
-				<ul class="slides">
+		<aside id="colorlib-hero-loginPage">
+			<div class="flexslider-loginPage">
+				<ul class="slides-loginPage">
 			   	<li style="background-image: url(images/login-1.jpg);">
-			   		<div class="overlay"></div>
+			   		<div class="overlay-loginPage"></div>
 			   		<div class="container-fluid">
 			   			<div class="row">
 				   		</div>
@@ -105,114 +105,188 @@
 		  	</div>
 		</aside>
 		<div id="colorlib-reservation">
-			<!-- <div class="container"> -->
+		<div class="colorlib-wrap">
+			<div class="container">
 				<div class="row">
-					<div class="search-wrap">
-						<div class="container">
-							<ul class="nav nav-tabs">
-								<li class="active"><a data-toggle="tab" href="#flight"><i class="flaticon-boat"></i>Voyageur</a></li>
-								<li><a data-toggle="tab" href="#hotel"><i class="flaticon-resort"></i>Fret</a></li>
-							</ul>
-						</div>
-						<div class="tab-content">
-							<div id="flight" class="tab-pane fade in active">
-								<form method="post" action="reservationVoyageur.php" class="colorlib-form">
-				              	<div class="row">
-				              	 <div class="col-md-3">
-				              	 	<div class="form-group">
-				                    <label for="date">Port de départ</label>
-				                    <div class="form-field">
-				                      <input type="text" id="location" class="form-control" placeholder="D'ou partez-vous ?">
-				                    </div>
-				                  </div>
-				              	 </div>
-				                <div class="col-md-2">
-				                  <div class="form-group">
-				                    <label for="date">Date de départ</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Date de départ">
-				                    </div>
-				                  </div>
-				                </div>
-				                <div class="col-md-2">
-				                  <div class="form-group">
-				                    <label for="adultes">Combien d'adulte(s)</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="adultes" id="adultes" class="form-control">
-										<option value="" selected disabled hidden>Choisisez un chiffre</option>
-				                        <option value="#">1</option>
-				                        <option value="#">2</option>
-				                        <option value="#">3</option>
-				                        <option value="#">4</option>
-				                        <option value="#">5+</option>
-				                      </select>
-				                    </div>
-				                  </div>
-				                </div>
-								<div class="col-md-2">
-				                  <div class="form-group">
-				                    <label for="ados">d'adolescent(s)</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="ados" id="ados" class="form-control">
-										<option value="" selected disabled hidden>Choisisez un chiffre</option>
-										<option value="#">0</option>
-				                        <option value="#">1</option>
-				                        <option value="#">2</option>
-				                        <option value="#">3</option>
-				                        <option value="#">4</option>
-				                        <option value="#">5+</option>
-				                      </select>
-				                    </div>
-				                  </div>
-				                </div>
-								<div class="col-md-2">
-				                  <div class="form-group">
-				                    <label for="enfants">d'enfant(s)</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="enfants" id="enfants" class="form-control">
-										<option value="" selected disabled hidden>Choisisez un chiffre</option>
-				                        <option value="#">0</option>
-										<option value="#">1</option>
-				                        <option value="#">2</option>
-				                        <option value="#">3</option>
-				                        <option value="#">4</option>
-				                        <option value="#">5+</option>
-				                      </select>
-				                    </div>
-				                  </div>
-				                </div>
+					<div class="col-md-9">
+						<div class="row">
+							<div class="wrap-division">
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-1.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
 								</div>
-								<div class="row">
-								<div class="col-md-3">
-				              	 	<div class="form-group">
-				                    <label for="date">Port d'arrivée</label>
-				                    <div class="form-field">
-				                      <input type="text" id="location" class="form-control" placeholder="Ou allez-vous ?">
-				                    </div>
-				                  </div>
-				              	 </div>
-				                <div class="col-md-2">
+
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-2.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-3.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-4.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-5.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-6.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-7.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-sm-6 animate-box">
+									<div class="hotel-entry">
+										<a href="hotel-room.html" class="hotel-img" style="background-image: url(images/hotel-8.jpg);">
+											<p class="price"><span>$120</span><small> /night</small></p>
+										</a>
+										<div class="desc">
+											<p class="star"><span><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i><i class="icon-star-full"></i></span> 545 Reviews</p>
+											<h3><a href="hotel-room.html">Hotel Edison</a></h3>
+											<span class="place">New York, USA</span>
+											<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<ul class="pagination">
+									<li class="disabled"><a href="#">&laquo;</a></li>
+									<li class="active"><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">&raquo;</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- SIDEBAR-->
+					<div class="col-md-3">
+						<div class="sidebar-wrap">
+							<div class="side search-wrap animate-box">
+								<h3 class="sidebar-heading">Find your hotel</h3>
+								<form method="post" class="colorlib-form">
+				              	<div class="row">
+				                <div class="col-md-12">
 				                  <div class="form-group">
-				                    <label for="date">Date d'arrivée</label>
+				                    <label for="date">Check-in:</label>
 				                    <div class="form-field">
 				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Date d'arrivée">
+				                      <input type="text" id="date" class="form-control date" placeholder="Check-in date">
 				                    </div>
 				                  </div>
-												</div>
-												<div class="col-md-2">
-														<div class="form-group">
-														<label for="radio-inline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vous avez un véhicule ?</label>
-														<div class="form-field">
-														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Non</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="0" checked>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>Oui</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="1">
-														</div>
-													</div>
-													</div>
+				                </div>
+				                <div class="col-md-12">
+				                  <div class="form-group">
+				                    <label for="date">Check-out:</label>
+				                    <div class="form-field">
+				                      <i class="icon icon-calendar2"></i>
+				                      <input type="text" id="date" class="form-control date" placeholder="Check-out date">
+				                    </div>
+				                  </div>
+				                </div>
+				                <div class="col-md-12">
+				                  <div class="form-group">
+				                    <label for="guests">Guest</label>
+				                    <div class="form-field">
+				                      <i class="icon icon-arrow-down3"></i>
+				                      <select name="people" id="people" class="form-control">
+				                        <option value="#">1</option>
+				                        <option value="#">2</option>
+				                        <option value="#">3</option>
+				                        <option value="#">4</option>
+				                        <option value="#">5+</option>
+				                      </select>
+				                    </div>
+				                  </div>
+				                </div>
+				                <div class="col-md-12">
+				                  <input type="submit" name="submit" id="submit" value="Find Hotel" class="btn btn-primary btn-block">
+				                </div>
+				              </div>
+				            </form>
+							</div>
+
+
+
 <!--											
 												<div class="row">
 													<div class="col-md-2">
