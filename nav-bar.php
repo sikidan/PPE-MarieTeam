@@ -3,11 +3,11 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-xs-2">
-							<div id="colorlib-logo"><a href="index.html">MarieTeam</a></div>
+							<div id="colorlib-logo"><a href="index.php">MarieTeam</a></div>
 						</div>
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
-								<li class="active"><a href="index.html">Accueil</a></li>
+								<li class="active"><a href="index.php">Accueil</a></li>
 								<li class="has-dropdown">
 									<a href="tours.html">Nos offres</a>
 									<ul class="dropdown">
