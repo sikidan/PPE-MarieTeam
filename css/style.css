@@ -259,13 +259,52 @@ h1, h2, h3, h4, h5, h6, figure {
     -o-transform: scale(1.1);
     transform: scale(1.1); }
 
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/  
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/  
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/  
+    #colorlib-hero-loginPage {
+      height: 300px;
+      background: #fff url(../images/loader.gif) no-repeat center center;
+      width: 110%;
+      float: left;
+      z-index: 0; }
+        #colorlib-hero-loginPage .btn-loginPage {
+        font-size: 24px; }
+        #colorlib-hero-loginPage .btn.btn-primary-loginPage {
+          padding: 14px 30px !important; }
+      #colorlib-hero-loginPage .flexslider-loginPage {
+        border: none;
+        z-index: 1;
+        margin-bottom: 0; }
+        #colorlib-hero-loginPage .flexslider-loginPage .slide-loginPages {
+          position: relative;
+          overflow: hidden; }
+          #colorlib-hero-loginPage .flexslider-loginPage .slides-loginPage li {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+            position: relative; 
+            left :-40px }
+             #colorlib-hero-loginPage .flexslider-loginPage .slides-loginPage li .overlay-loginPage {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              background: rgba(0, 0, 0, 0.3); }
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/  
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/  
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/  
+/*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*//*Test pour page de login*/        
 #colorlib-hero {
   height: 650px;
   background: #fff url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
   z-index: 0; }
-  #colorlib-hero .btn {
+    #colorlib-hero .btn {
     font-size: 24px; }
     #colorlib-hero .btn.btn-primary {
       padding: 14px 30px !important; }
@@ -374,6 +413,18 @@ h1, h2, h3, h4, h5, h6, figure {
           @media screen and (max-width: 480px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
               width: 100%; } }
+
+.form-table{
+  color:#fff;
+  width:100%;
+}
+.form-table, th, td {
+  border: 1px solid #fff;
+}              
+
+table .btn .btn-primary .btn-block{
+  v
+}
 
 .colorlib-light-grey {
   background: #fafafa; }
@@ -524,7 +575,12 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-top: 28px;
   padding: 12px !important;
   font-size: 14px;
-  color: #000; }
+  color: #000; 
+}
+
+  .colorlib-form .form-td {
+    text-align: center;
+    }
 
 .services {
   padding: 7em 2em; }
@@ -1908,3 +1964,10 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0; }
+
+  input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="button"].btn-block {
+
+    width: 50%;
+    margin: auto;
+
+}
