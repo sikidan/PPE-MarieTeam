@@ -1774,9 +1774,9 @@ input[type="text"] {
   -o-transition: 0.5s;
   transition: 0.5s;
   padding: 4px 4px; }
-  .btn-reduc::-moz-selection{
+  .btn-reduc::selection{
   background-color: #FFFFFF;
-  color: white; }
+  color: white;}
 
 .btn {
   margin-right: 4px;
