@@ -26,7 +26,7 @@
 						<ul class="colorlib-footer-links">
 							<li>5 Avenue Anatole France, <br> Champ de Mars</li>
 							<li><a href="tel://06.00.00.00.00">+ 06.00.00.00.00</a></li>
-							<li><a href="mailto:remy.bouchez.eleve@gmail.com">remy.bouchez.eleve@gmail.com</a></li>
+							<li><a href="mailto:marieteam.contatc@gmail.com">marieteam.contatc@gmail.com</a></li>
 						</ul>
 					</div>
 				</div>
