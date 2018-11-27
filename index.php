@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+    <link rel="icon" href="favicon.ico" />
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Accueil - MarieTeam</title>

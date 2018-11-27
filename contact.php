@@ -138,7 +138,7 @@
 								<p><span><i class="icon-phone3"></i></span> <a href="tel://0600000000">+ 06.00.00.00.00</a></p>
 							</div>
 							<div class="col-md-4">
-								<p><span><i class="icon-paperplane"></i></span> <a href="mailto:marieteam.contatc@gmail.com">marieteam.contatc@gmail.com</a></p>
+								<p><span><i class="icon-paperplane"></i></span> <a href="mailto:marieteam.contact@gmail.com">marieteam.contact@gmail.com</a></p>
 							</div>
 						</div>
 					</div>
