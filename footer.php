@@ -24,7 +24,7 @@
 					<div class="col-md-4 col-md-push-1">
 						<h4>Information de contact</h4>
 						<ul class="colorlib-footer-links">
-							<li>5 Avenue Anatole France, <br> Champ de Mars - Paris 75000</li>
+							<li>5 Avenue Anatole France, <br> Champ de Mars</li>
 							<li><a href="tel://06.00.00.00.00">+ 06.00.00.00.00</a></li>
 							<li><a href="mailto:remy.bouchez.eleve@gmail.com">remy.bouchez.eleve@gmail.com</a></li>
 						</ul>
