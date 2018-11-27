@@ -110,8 +110,12 @@
                                             <form method="POST" action="">
                                             <table>
                                                 <tr>
-                                                <td>Votre email :</td>
-                                                <td><input type="email" name="mailconnect" placeholder="Mail" /><br /></td>
+                                                	<div class="col-md-2">
+				                  						<div class="form-group">
+                                                			<td>Votre email :</td>
+                                                			<td><input type="email" name="mailconnect" placeholder="Mail" /><br /></td>
+                                                		</div>
+                                                	</div>
                                                 </tr>
                                                 <tr>
                                                 <td>Votre mot de passe :</td>

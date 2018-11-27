@@ -9,7 +9,7 @@
 							<ul>
 								<li class="active"><a href="index.html">Accueil</a></li>
 								<li class="has-dropdown">
-									<a href="offres.php">Nos offres</a>
+									<a href="tours.html">Nos offres</a>
 									<ul class="dropdown">
 										<li><a href="#">Promotions</a></li>
 										<li><a href="#">Transport de marchandises</a></li>
