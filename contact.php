@@ -91,6 +91,17 @@ session_start();
 
 <div id="colorlib-contact">
 			<div class="container">
+            <?php if(array_key_exists('errors',$_SESSION)): ?>
+            <div class="alert alert-danger">
+              <?= implode('<br>', $_SESSION['errors']); ?>
+              </div>
+              <?php endif; ?>
+              <?php if(array_key_exists('success',$_SESSION)): ?>
+              <div class="alert alert-success">
+              Votre email à bien été transmis !
+              </div>
+              <?php endif; ?>
+                <form action="sendContact.php" method="post">
 				<div class="row">
 					<div class="col-md-10 col-md-offset-1 animate-box">
 						<h3>Formulaire de contact</h3>
@@ -98,32 +109,32 @@ session_start();
 							<div class="row form-group">
 								<div class="col-md-6 padding-bottom">
 									<label for="prenom">Prénom</label>
-									<input type="text" id="prenom" class="form-control" placeholder="Votre prénom">
+									<input type="text" id="prenom" class="form-control" placeholder="Votre prénom" value="<?php echo isset($_SESSION['inputs']['prenom'])? $_SESSION['inputs']['prenom'] : ''; ?>">
 								</div>
 								<div class="col-md-6">
 									<label for="nom">Nom</label>
-									<input type="text" id="nom" class="form-control" placeholder="Votre nom">
+									<input type="text" id="nom" class="form-control" placeholder="Votre nom" value="<?php echo isset($_SESSION['inputs']['nom'])? $_SESSION['inputs']['nom'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="email">Email</label>
-									<input type="text" id="email" class="form-control" placeholder="Votre adresse mail">
+									<input type="text" id="email" class="form-control" placeholder="Votre adresse mail" value="<?php echo isset($_SESSION['inputs']['email'])? $_SESSION['inputs']['email'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="sujet">Sujet</label>
-									<input type="text" id="sujet" class="form-control" placeholder="Le sujet de votre message">
+									<input type="text" id="sujet" class="form-control" placeholder="Le sujet de votre message" value="<?php echo isset($_SESSION['inputs']['sujet'])? $_SESSION['inputs']['sujet'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="message">Message</label>
-									<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Que voullez vous nous dire ?"></textarea>
+									<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Que voullez vous nous dire ?" value="<?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?>"></textarea>
 								</div>
 							</div>
 							<div class="form-group text-center">
@@ -186,4 +197,8 @@ session_start();
 
 	</body>
 </html>
-
+<?php
+    unset($_SESSION['inputs']); //Permet de nettoyer les données précédentes
+    unset($_SESSION['success']);
+    unset($_SESSION['errors']);
+?>
