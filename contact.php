@@ -108,33 +108,33 @@ session_start();
 						<form action="#">
 							<div class="row form-group">
 								<div class="col-md-6 padding-bottom">
-									<label for="prenom">Prénom</label>
-									<input type="text" id="prenom" class="form-control" placeholder="Votre prénom" value="<?php echo isset($_SESSION['inputs']['prenom'])? $_SESSION['inputs']['prenom'] : ''; ?>">
+									<label for="inputprenom">Prénom</label>
+									<input type="text" id="inputprenom" name="prenom" class="form-control" placeholder="Votre prénom" value="<?php echo isset($_SESSION['inputs']['prenom'])? $_SESSION['inputs']['prenom'] : ''; ?>">
 								</div>
 								<div class="col-md-6">
-									<label for="nom">Nom</label>
-									<input type="text" id="nom" class="form-control" placeholder="Votre nom" value="<?php echo isset($_SESSION['inputs']['nom'])? $_SESSION['inputs']['nom'] : ''; ?>">
+									<label for="inputnom">Nom</label>
+									<input type="text" id="inputnom" name="nom" class="form-control" placeholder="Votre nom" value="<?php echo isset($_SESSION['inputs']['nom'])? $_SESSION['inputs']['nom'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
-									<label for="email">Email</label>
-									<input type="text" id="email" class="form-control" placeholder="Votre adresse mail" value="<?php echo isset($_SESSION['inputs']['email'])? $_SESSION['inputs']['email'] : ''; ?>">
+									<label for="inputemail">Email</label>
+									<input type="text" id="inputemail" name="email" class="form-control" placeholder="Votre adresse mail" value="<?php echo isset($_SESSION['inputs']['email'])? $_SESSION['inputs']['email'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
-									<label for="sujet">Sujet</label>
-									<input type="text" id="sujet" class="form-control" placeholder="Le sujet de votre message" value="<?php echo isset($_SESSION['inputs']['sujet'])? $_SESSION['inputs']['sujet'] : ''; ?>">
+									<label for="inputsujet">Sujet</label>
+									<input type="text" id="inputsujet" name="sujet" class="form-control" placeholder="Le sujet de votre message" value="<?php echo isset($_SESSION['inputs']['sujet'])? $_SESSION['inputs']['sujet'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Que voullez vous nous dire ?" value="<?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?>"></textarea>
+									<label for="inputmessage">Message</label>
+									<textarea name="message" id="inputmessage" cols="30" rows="10" class="form-control" placeholder="Que voullez vous nous dire ?" value="<?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?>"></textarea>
 								</div>
 							</div>
 							<div class="form-group text-center">
@@ -158,7 +158,8 @@ session_start();
 						</div>
 					</div>
 				</div>
-			</div>
+                </form>
+            </div>
 		</div>
 
          <!-- appel du footer -->                                           
