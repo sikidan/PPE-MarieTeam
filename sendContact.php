@@ -29,14 +29,14 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
   $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
   $to = 'Votre_adresse_email_est_ici@mail.fr'; // Insérer votre adresse email ICI
-  $sujet = 'Message envoyé par ' . htmlspecialchars($_POST['nom']) .' - <i>' . htmlspecialchars($_POST['email']) .'</i>';
+  $subject = 'Message envoyé par ' . htmlspecialchars($_POST['nom']) .' - <i>' . htmlspecialchars($_POST['email']) .'</i>';
   $message_content = '
 <table>
   <tr>
     <td><b>Emetteur du message:</b></td>
   </tr>
   <tr>
-    <td>'. $suject . '</td>
+    <td>'. $subject . '</td>
   </tr>
   <tr>
     <td><b>Contenu du message:</b></td>
@@ -46,7 +46,7 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
   </tr>
   </table>
   ';
-mail($to, $sujet, $message_content, $headers);
+mail($to, $subject, $message_content, $headers);
   header('Location: contact.php');
   }
 ?>
