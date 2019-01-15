@@ -1,3 +1,74 @@
+<?php
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
+
+if(isset($_POST['formInscription'])) {
+   $nom = htmlspecialchars($_POST['nom']);
+   $prenom = htmlspecialchars($_POST['prenom']);
+   $telephone = htmlspecialchars($_POST['telephone']);
+   $dateNaiss = ($_POST['annee'])."-".($_POST['mois'])."-".($_POST['jours']);
+   $dateNaiss = htmlspecialchars($dateNaiss);
+   $mail = htmlspecialchars($_POST['mail']);
+   $mail2 = htmlspecialchars($_POST['mail2']);
+   $adresse = htmlspecialchars($_POST['adresse']);
+   $CP = htmlspecialchars($_POST['CP']);
+   $ville = htmlspecialchars($_POST['ville']);
+   $mdp = sha1($_POST['mdp']);
+   $mdp2 = sha1($_POST['mdp2']);
+   $regex = '`[0-9]{10}`';
+   if(!empty($_POST['nom']) AND !empty($_POST['prenom']) AND !empty($_POST['telephone']) AND !empty($_POST['dateNaiss']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['adresse']) AND !empty($_POST['CP']) AND !empty($_POST['ville']) AND !empty($_POST['mdp'])) {
+      $pseudolength = strlen($nom);
+      if($pseudolength <= 255) {		 	 
+         if($mail == $mail2) {
+            if(filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+               $reqmail = $bdd->prepare("SELECT * FROM client WHERE mail = ?");
+               $reqmail->execute(array($mail));
+               $mailexist = $reqmail->rowCount();
+               if($mailexist == 0) {
+                  if($mdp == $mdp2) {
+                    $insertmbr = $bdd->prepare('INSERT INTO client(nom, prenom, telephone, dateNaiss, mail, adresse, CP, ville, nbPoints, MotDePasse) VALUES(\''.$nom.'\',\''.$prenom.'\',\''.$telephone.'\',\''.$dateNaiss.'\',\''.$mail.'\',\''.$adresse.'\',\''.$CP.'\',\''.$ville.'\',\'0\',\''.$mdp.'\')');
+					$insertmbr = $insertmbr->execute(array('INSERT INTO client(nom, prenom, telephone, dateNaiss, adresse, CP, ville, nbPoints, MotDePasse) VALUES(\''.$nom.'\',\''.$prenom.'\',\''.$telephone.'\',\''.$dateNaiss.'\',\''.$mail.'\',\''.$adresse.'\',\''.$CP.'\',\''.$ville.'\',\'0\',\''.$mdp.'\')'));
+                     $erreur = "Votre compte a bien été créé ! <a href=\"connexion.php\">Me connecter</a>";
+                  } else {
+                     $erreur = "Vos mots de passes ne correspondent pas !";
+                  }
+               } else {
+                  $erreur = "Adresse mail déjà utilisée !";
+               }
+            } else {
+               $erreur = "Votre adresse mail n'est pas valide !";
+            }
+         } else {
+            $erreur = "Vos adresses mail ne correspondent pas !";
+         }
+	  } else {
+         $erreur = "Votre pseudo ne doit pas dépasser 255 caractères !";
+      }
+   } else {
+      $erreur = "Tous les champs doivent être complétés !";
+   }
+}
+
+if(isset($_POST['formconnexion'])) {
+   $mailconnect = htmlspecialchars($_POST['mailconnect']);
+   $mdpconnect = sha1($_POST['mdpconnect']);
+   if(!empty($mailconnect) AND !empty($mdpconnect)) {
+      $requser = $bdd->prepare("SELECT * FROM client WHERE mail = ? AND motdepasse = ?");
+      $requser->execute(array($mailconnect, $mdpconnect));
+      $userexist = $requser->rowCount();
+      if($userexist == 1) {
+         $userinfo = $requser->fetch();
+         $_SESSION['id'] = $userinfo['id'];
+         $_SESSION['pseudo'] = $userinfo['nom'];
+         $_SESSION['mail'] = $userinfo['mail'];
+         header("Location: profil.php?id=".$_SESSION['id']);
+      } else {
+         $erreur = "Mauvais mail ou mot de passe !";
+      }
+   } else {
+      $erreur = "Tous les champs doivent être complétés !";
+   }
+}
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -133,7 +204,8 @@
 										
 										<div class="desc">
 											<h3><p>Inscription</p></h3>
-                                            <table>
+                                            <form method="POST" action="">
+<table>
                                                 <tr>
                                                 <td>Votre nom :</td>
                                                 <td><input type="text" name="nom" placeholder="Nom" /><br /></td>
@@ -144,11 +216,15 @@
                                                 </tr>
                                                 <tr>
                                                 <td>Votre téléphone :</td>
-                                                <td><input type="number" name="tel" placeholder="Téléphone" /><br /></td>
+                                                <td><input type="tel" pattern="[0-9]{10}" name="telephone" placeholder="Téléphone" /><br /></td>
                                                 </tr>
                                                 <tr>
                                                 <td>Votre email :</td>
                                                 <td><input type="email" name="mail" placeholder="Mail" /><br /></td>
+                                                </tr>
+												<tr>
+                                                <td>Confirmer votre email :</td>
+                                                <td><input type="email" name="mail2" placeholder="Confirmation du mail" /><br /></td>
                                                 </tr>
                                                 <tr>
                                                 <td>Votre date de naissance :</td>
@@ -161,7 +237,7 @@
                                                         }                                                                                                           
                                                     echo "</select>";
                                                 ?>
-                                                <select>
+                                                <select name="mois">
                                                     <option value="01">Janvier</option>
                                                     <option value="02">Février</option>
                                                     <option value="03">Mars</option>
@@ -175,7 +251,8 @@
                                                     <option value="11">Novembre</option>
                                                     <option value="12">Décembre</option>
                                                 </select> 
-                                                <?php
+												
+												<?php
                                                 // Select pour année
                                                 echo "<select name=\"annee\">";
                                                 echo "<option selected=\"selected\" value=".date('Y').">".date('Y')."</option>";
@@ -193,7 +270,7 @@
                                                 </tr>
                                                 <tr>
                                                 <td>Votre code postal :</td>
-                                                <td><input type="number" name="CP" placeholder="Code postal" /><br /></td>
+                                                <td><input type="text" name="CP" placeholder="Code postal" /><br /></td>
                                                 </tr>
                                                 <tr>
                                                 <td>Votre ville :</td>
@@ -201,7 +278,7 @@
                                                 </tr>
                                                 <tr>
                                                 <td>Votre mot de passe :</td>
-                                                <td><input type="password" name="mdp1" placeholder="Mot de passe" /></td>
+                                                <td><input type="password" name="mdp" placeholder="Mot de passe" /></td>
                                                 </tr>
                                                 <td>Confirmation du mot de passe :</td>
                                                 <td><input type="password" name="mdp2" placeholder="Mot de passe" /></td>
@@ -209,6 +286,11 @@
                                             </table> <br>
                                                 <input type="submit" name="formInscription" value="S'inscrire !" />
                                             </form> 
+											<?php
+         if(isset($erreur)) {
+            echo '<font color="red">'.$erreur."</font>";
+         }
+         ?>
 										</div>
 									</div>
 								</div>

@@ -28,7 +28,7 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
   $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
-  $to = 'Votre_adresse_email_est_ici@mail.fr'; // Insérer votre adresse email ICI
+  $to = 'marieteam.contact@gmail.com'; // Insérer votre adresse email ICI
   $subject = 'Message envoyé par ' . htmlspecialchars($_POST['nom']) .' - <i>' . htmlspecialchars($_POST['email']) .'</i>';
   $message_content = '
 <table>
