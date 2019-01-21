@@ -1,4 +1,5 @@
 <?php
+session_start();
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
 
 if(isset($_POST['formInscription'])) {
@@ -60,7 +61,11 @@ if(isset($_POST['formconnexion'])) {
          $_SESSION['id'] = $userinfo['id'];
          $_SESSION['pseudo'] = $userinfo['nom'];
          $_SESSION['mail'] = $userinfo['mail'];
-         header("Location: profil.php?id=".$_SESSION['id']);
+		 if($mailconnect == "admin") {
+			header("Location: admin/index.php"); 
+		 } else {
+			header("Location: profil.php?id=".$_SESSION['id']); 
+		 }         
       } else {
          $erreur = "Mauvais mail ou mot de passe !";
       }
