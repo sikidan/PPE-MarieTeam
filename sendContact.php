@@ -1,7 +1,9 @@
 <?php
 //Permet de démarrer une session visiteur
 session_start();
+header('Location: contact.php');
 
+$mail = 'marieteam.contact@gmail.com';
 if (!preg_match("#^[a-z0-9._-]+@(hotmail|live|msn).[a-z]{2,4}$#", $mail)) {
     $passage_ligne = "\r\n";
 }
@@ -19,7 +21,7 @@ $boundary = "-----=".md5(rand());
 $sujet = $_POST['sujet'];
 
 //Création du header de l'email
-$header = "From: \"Client\"<$_POST['email']>".$passage_ligne;
+$header = "From: \"Client\"$_POST['email']".$passage_ligne;
 $header.= "Reply-to: \"MarieTeam\" <marieteam.contact@gmail.com>".$passage_ligne;
 $header.= "MIME-Version: 1.0".$passage_ligne;
 $header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
