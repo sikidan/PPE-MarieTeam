@@ -20,9 +20,9 @@ $sujet = $_POST['sujet'];
 
 //Création du header de l'email
 $header = 'From: \"Client\"<'$_POST['email']'>'.$passage_ligne;
-$header .= "Reply-to: \"MarieTeam\" <marieteam.contact@gmail.com>".$passage_ligne;
-$header .= "MIME-Version: 1.0".$passage_ligne;
-$header .= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
+$header.= "Reply-to: \"MarieTeam\" <marieteam.contact@gmail.com>".$passage_ligne;
+$header.= "MIME-Version: 1.0".$passage_ligne;
+$header.= "Content-Type: multipart/alternative;".$passage_ligne." boundary=\"$boundary\"".$passage_ligne;
 
 //Création du message
 $message = $passage_ligne."--".$boundary.$passage_ligne;
