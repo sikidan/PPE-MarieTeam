@@ -25,28 +25,17 @@ if(!empty($errors)){ // si erreur on renvoie vers la page précédente
   header('Location: contact.php');
   }else{
   $_SESSION['success'] = 1;
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-  $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
-  $to = 'marieteam.contact@gmail.com'; // Insérer votre adresse email ICI
-  $subject = 'Message envoyé par ' . htmlspecialchars($_POST['nom']) .' - <i>' . htmlspecialchars($_POST['email']) .'</i>';
-  $message_content = '
-<table>
-  <tr>
-    <td><b>Emetteur du message:</b></td>
-  </tr>
-  <tr>
-    <td>'. $subject . '</td>
-  </tr>
-  <tr>
-    <td><b>Contenu du message:</b></td>
-  </tr>
-  <tr>
-    <td>'. htmlspecialchars($_POST['message']) .'</td>
-  </tr>
-  </table>
-  ';
-mail($to, $subject, $message_content, $headers);
-  header('Location: contact.php');
+  
+    $from = $_POST['email'];
+    
+    $to = 'marieteam.contact@gmail.com';
+        
+    $subject = $_POST['sujet'];
+        
+    $message = $_POST['message'];
+    
+    $headers = "From:" . $from;
+    
+    mail($to, $subject, $message, $headers);
   }
 ?>
