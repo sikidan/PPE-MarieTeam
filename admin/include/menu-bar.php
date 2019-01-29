@@ -1,16 +1,10 @@
-<?php
-
+ <?php 
 $bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
 
-if(isset($_SESSION['id'])) {
    $requser = $bdd->prepare("SELECT * FROM client WHERE id = ?");
    $requser->execute(array($_SESSION['id']));
    $user = $requser->fetch();
-}
-else {
-   //header("Location: connexion.php");
-   echo $_SESSION['id'];
-}
+
 ?>
 
 <div class="row">
@@ -72,7 +66,7 @@ else {
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         <li><a href="#"><span class="icon nalika-user author-log-ic"></span> My Profile</a>
                                                         </li>
-                                                        <li><a href="../deconnexion.html"><span class="icon nalika-unlocked author-log-ic"></span> Déconnexion</a>
+                                                        <li><a href="../../deconnexion.php"><span class="icon nalika-unlocked author-log-ic"></span> Déconnexion</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -83,4 +77,4 @@ else {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                     </div> 

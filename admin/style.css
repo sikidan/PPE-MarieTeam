@@ -19,6 +19,24 @@
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
+table#t01 {
+    width:100%;
+    margin:5px;
+  }
+  table#t01 tr:nth-child(even) {
+   background-color: #f2f2f2;
+   padding: 20px;
+  }
+  table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+   padding: 20px;
+  }
+  table#t01 th {
+      background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+  }
+  
 html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#152036;}
 .floatleft {float:left}
 .floatright {float:right}
@@ -3667,3 +3685,4 @@ th.fc-day-header.fc-widget-header {
 	border-color: #152036;
 	color:#fff;
 }
+

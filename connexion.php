@@ -61,7 +61,7 @@ if(isset($_POST['formconnexion'])) {
          $_SESSION['id'] = $userinfo['id'];
          $_SESSION['pseudo'] = $userinfo['nom'];
          $_SESSION['mail'] = $userinfo['mail'];
-		 if($mailconnect == "admin") {
+		 if($mailconnect == "marieteam.contact@gmail.com") {
 			header("Location: admin/index.php"); 
 		 } else {
 			header("Location: profil.php?id=".$_SESSION['id']); 

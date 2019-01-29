@@ -1,3 +1,7 @@
+<?php 
+session_start();
+if (isset($_SESSION['id'])) {
+?>
 <!doctype html>
 <html class="no-js" lang="fr">
     <title>MarieTeam | Panel d'administration</title>
@@ -549,3 +553,10 @@
 </body>
 
 </html>
+<?php 
+} else {
+
+  header('Location: ..\connexion.php');
+
+}
+?>

@@ -1,6 +1,6 @@
 	<!-- appel du header -->
     <?php
-        include("include/header.php");
+        include("header.php");
     ?>
 	<body>
 		<!--[if lt IE 8]>
@@ -26,7 +26,7 @@
 				</div>
 				<!-- appel de la barre de navigation -->
                 <?php
-                    include("include/left-bar.php");
+                    include("left-bar.php");
                 ?>
 				<!-- Start Welcome area -->
 				<div class="all-content-wrapper">
@@ -44,7 +44,8 @@
 							<div class="container-fluid">
 								<!-- appel de la barre de menu (message+info utilisateur) -->
                                 <?php
-                                    include("include/menu-bar.php");
+                                    include("menu-bar.php");
                                 ?>
 							</div>
 						</div>
+					</div>

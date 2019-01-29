@@ -90,18 +90,22 @@ session_start();
 		</aside>
 
 <div id="colorlib-contact">
-    <div class="container">
-        <div class="alert alert-danger">
-        Votre email n'a pas été transmis !
-        </div>
-            <div class="alert alert-success">
-            Votre email à bien été transmis !
-            </div>
+			<div class="container">
+            <?php if(array_key_exists('errors',$_SESSION)): ?>
+            <div class="alert alert-danger">
+              <?= implode('<br>', $_SESSION['errors']); ?>
+              </div>
+              <?php endif; ?>
+              <?php if(array_key_exists('success',$_SESSION)): ?>
+              <div class="alert alert-success">
+              Votre email à bien été transmis !
+              </div>
+              <?php endif; ?>
                 <form action="sendContact.php" method="post">
-				    <div class="row">
-					   <div class="col-md-10 col-md-offset-1 animate-box">
-						  <h3>Formulaire de contact</h3>
-						  <form action="sendContact.php" method="post">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 animate-box">
+						<h3>Formulaire de contact</h3>
+						<form action="#">
 							<div class="row form-group">
 								<div class="col-md-6 padding-bottom">
 									<label for="inputprenom">Prénom</label>

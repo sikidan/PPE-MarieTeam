@@ -30,7 +30,7 @@
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="Login" href="login.php"><span class="mini-sub-pro">Login</span></a></li>
                                 <li><a title="Register" href="register.php"><span class="mini-sub-pro">Register</span></a></li>
-                                <li><a title="Lock" href="lock.php"><span class="mini-sub-pro">Lock</span></a></li>
+                                <li><a title="Déconnexion" href="../../deconnexion.php"><span class="mini-sub-pro">Déconnexion</span></a></li>
                                 <li><a title="Password Recovery" href="password-recovery.php"><span class="mini-sub-pro">Password Recovery</span></a></li>
                             </ul>
                         </li>
