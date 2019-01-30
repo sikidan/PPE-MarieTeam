@@ -1,12 +1,39 @@
 <?php 
 session_start();
 if (isset($_SESSION['id'])) {
+
+    $bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
+
+    //requete pour affichage des differentes liaisons
+       $reqAffich = $bdd->prepare("SELECT secteur.nom nomSecteur, P1.nom portArr, P2.nom portDep, liaison.code idLiaison, liaison.distance 
+       FROM liaison, secteur, port P1, port P2
+       WHERE liaison.idSecteur = secteur.code
+       AND liaison.portArr = P1.id
+       AND liaison.portDep = P2.id
+       ORDER BY nomSecteur ASC");
+       $reqAffich->execute();
+       $affichage = $reqAffich->fetch();
+       $reqAffich->execute();
+
+    //requete pour ajout de nouvelle liaison
+        //$distance = htmlspecialchars($_POST['distance']);
+        //distance a modifier
+        $distance ="10.10";
+        //$portDep = htmlspecialchars($_POST['portDep']);
+        //portDep a modifier
+        $portDep = "1";
+        $portArr = "4";
+        $reqAjoutSecteur = $bdd->prepare("SELECT * FROM secteur");
+        $reqAjoutSecteur->execute();
+        $ajoutSecteur = $reqAjoutSecteur->fetch();
+        $reqAjoutPortDep = $bdd->prepare("SELECT * FROM port WHERE secteur =".$portDep."");
+        $reqAjoutPortDep->execute();
+        $reqAjoutPortArr = $bdd->prepare("SELECT * FROM port WHERE secteur =".$portArr."");
+        $reqAjoutPortArr->execute();
+        $reqAjout = $bdd->prepare("INSERT INTO liaison (code, distance, idSecteur, portArr, portDep) VALUES (NULL, '".$distance."', '§§§', '§§§', '§§§');");
+        $reqAjout->execute();
+
 ?>
-
-<!-- //faire style tableau (https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_id2)
-//ref a main.css ligne 50
- -->
-
 
 <!doctype html>
 <html class="no-js" lang="fr">
@@ -16,25 +43,6 @@ if (isset($_SESSION['id'])) {
 <?php
         include("include/head-global.php");
 ?>
-<!-- <style>
-table#t01 {
-  width:100%;
-  margin:5px;
-}
-table#t01 tr:nth-child(even) {
- background-color: #f2f2f2;
- padding: 20px;
-}
-table#t01 tr:nth-child(odd) {
- background-color: #fff;
- padding: 20px;
-}
-table#t01 th {
-    background-color: #4CAF50;
-  color: white;
-  padding: 20px;
-}
-</style> -->
         <!-- debut page hors menu -->  
         <!-- Single pro tab start-->
         <div class="single-product-tab-area mg-b-30">
@@ -46,7 +54,7 @@ table#t01 th {
                             <div class="review-tab-pro-inner">
                                 <ul id="myTab3" class="tab-review-design">
                                     <li class="active"><a href="#liaison"><i class="icon nalika-edit" aria-hidden="true"></i>Liaisons</a></li>
-                                    <li><a href="#description"><i class="icon nalika-edit" aria-hidden="true"></i> Product Edit</a></li>
+                                    <li><a href="#ajout"><i class="icon nalika-edit" aria-hidden="true"></i>Ajouter une liaison</a></li>
                                     <li><a href="#INFORMATION"><i class="icon nalika-chat" aria-hidden="true"></i> Review</a></li>
                                 </ul>
                                 <div id="myTabContent" class="tab-content custom-product-edit">
@@ -57,33 +65,30 @@ table#t01 th {
                                             <th rowspan=2>Secteur</th>
                                             <th colspan=4 style="padding:0px;">Liaison</th> 
                                             <tr>
-                                                <th>Code liaison</th>
+                                                <th style="margin:30px;">Code liaison</th>
                                                 <th>Distance en milles marin</th>
                                                 <th>Port de départ</th>
                                                 <th>Port d’arrivée</th>
                                             </tr>
                                         </tr>
-                                        <tr>
-                                            <td>Jill</td>
-                                            <td>Smith</td>
-                                            <td>50</td>
-                                            <td>Smith</td>
-                                            <td>50</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Eve</td>
-                                            <td>Jackson</td>
-                                            <td>94</td>
-                                            <td>Smith</td>
-                                            <td>50</td>
-                                        </tr>
-                                        <tr>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>80</td>
-                                            <td>Smith</td>
-                                            <td>50</td>
-                                        </tr>
+                                        <?php
+                                        $last = $affichage['nomSecteur'];
+                                        while($affichage = $reqAffich->fetch()) {                                            
+                                            if ($affichage['nomSecteur'] == $last){
+                                                echo "<tr>";
+                                            }else{                                                
+                                                echo "<tr style='border-top:1px solid black;'>";
+                                            }
+                                            
+                                                echo "<td>".$affichage['nomSecteur']."</td>
+                                                    <td>".$affichage['idLiaison']."</td>
+                                                    <td>".$affichage['distance']."</td>
+                                                    <td>".$affichage['portDep']."</td>
+                                                    <td>".$affichage['portArr']."</td>
+                                                </tr>";
+                                                $last = $affichage['nomSecteur'];
+                                        }
+                                        ?>
                                         </table>
                                         </div>
                                         <div class="row">
@@ -97,57 +102,40 @@ table#t01 th {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="product-tab-list tab-pane fade in" id="description">
+                                    <div class="product-tab-list tab-pane fade in" id="ajout">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                 <div class="review-content-section">
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="First Name">
-                                                    </div>
+
+                                                <select name="secteur" class="form-control pro-edt-select form-control-primary">
+                                                <?php 
+                                                while($ajoutSecteur = $reqAjoutSecteur->fetch()) {                                            
+                                                    echo "<option value='".$ajoutSecteur['id']."'>".$ajoutSecteur['nom']."</option>";
+                                        }
+                                        ?>
+														</select>
                                                     <div class="input-group mg-b-pro-edt">
                                                         <span class="input-group-addon"><i class="icon nalika-edit" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Product Title">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Regular Price">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="icon nalika-new-file" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Tax">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="icon nalika-favorites" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Quantity">
+                                                        <input type="text" class="form-control" placeholder="Distance" name="distance">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                 <div class="review-content-section">
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Last Name">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="icon nalika-favorites-button" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Product Description">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="fa fa-usd" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Sale Price">
-                                                    </div>
-                                                    <div class="input-group mg-b-pro-edt">
-                                                        <span class="input-group-addon"><i class="icon nalika-like" aria-hidden="true"></i></span>
-                                                        <input type="text" class="form-control" placeholder="Category">
-                                                    </div>
-                                                    <select name="select" class="form-control pro-edt-select form-control-primary">
-															<option value="opt1">Select One Value Only</option>
-															<option value="opt2">2</option>
-															<option value="opt3">3</option>
-															<option value="opt4">4</option>
-															<option value="opt5">5</option>
-															<option value="opt6">6</option>
+                                                <select name="portDep" class="form-control pro-edt-select form-control-primary">
+                                                <?php 
+                                                while($ajoutPortDep = $reqAjoutPortDep->fetch()) {                                            
+                                                    echo "<option value='".$ajoutPortDep['id']."'>".$ajoutPortDep['nom']."</option>";
+                                        }
+                                        
+                                        ?>
+														</select>
+                                                    <select name="portArr" class="form-control pro-edt-select form-control-primary">
+                                                    <?php 
+                                                 while($ajoutPortArr = $reqAjoutPortArr->fetch()) {                                            
+                                                    echo "<option value='".$ajoutPortArr['id']."'>".$ajoutPortArr['nom']."</option>";
+                                        }
+                                        ?>
 														</select>
                                                 </div>
                                             </div>
