@@ -70,6 +70,9 @@
 					</div>
 				</div>
 			</aside>
+            
+            <!-- Corps de la page -->
+            
 			<div id="colorlib-reservation">
 				<!--                 
 				<div class="container">
