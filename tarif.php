@@ -72,39 +72,72 @@
 					</div>
 				</div>
 			</aside>
-			
+            
             <!-- Corps de la page -->
-            <div id="colorlib-reservation">
+            <div id="colorlib-tarif">
                 <div class="container">
-                    <table class="table ftable-dark">
-                      <thead>
-                        <tr>
-                          <th scope="col"></th>
-                          <th scope="col">Type</th>
-                          <th scope="col">Période</th>
-                          <th scope="col">Handle</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Adulte</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Junior 8 à 18 ans</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td>Enfant 0 à 7 ans</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div class="search-wrap">
+                        <div class="tab-content">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="lblLaison" for="tableTarif">Liaisons :</label>
+                                    <div class="form-field">
+                                        <select name="TableTarif" id="TableTarif" class="form-control">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="lblDate" for="tableTarif">Date :</label>
+                                    <div class="form-field">
+                                        <select name="TableTarif" id="TableTarif" class="form-control">
+                                            
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <table class="table table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Catégorie</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Période</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>A : Passager</td>
+                                        <td>A1 : </td>
+                                        <td>A2 : </td>
+                                        <td>A3 : </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>B : Véhicule inférieur à 2m</td>
+                                        <td rowspan="2">C1 : Fourgon</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>C : Véhicule supérieur à 2m</td>
+                                        <td rowspan="2">C2 : Camping-car</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td></td>
+                                        <td rowspan="2">C3 : Camion</td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
                 
