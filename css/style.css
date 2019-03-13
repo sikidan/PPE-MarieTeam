@@ -458,8 +458,16 @@ h1, h2, h3, h4, h5, h6, figure {
 
 /* Table tarif */
 
-.lblLaison {
+#colorlib-tarif {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.lblLiaison {
     margin-top: 30px;
+}
+.dateBlock .liaisonBlock {
+    display: inline-block;
 }
 
 .table-dark {
@@ -476,6 +484,14 @@ h1, h2, h3, h4, h5, h6, figure {
 #colorlib-tarif .nav-tabs li.active {
     color: #fff !important !important;
     background: #2C2E3E !important; 
+}
+
+.search-wrap .tab-content {
+    color: white;
+}
+
+.form-control {
+    color: white;
 }
 
 /* Table réservation */

@@ -1,3 +1,20 @@
+<?php 
+
+    $bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
+
+    //requete pour affichage des differentes liaisons
+       $reqAffich = $bdd->prepare("SELECT secteur.nom nomSecteur, P1.nom portArr, P2.nom portDep, liaison.code idLiaison, liaison.distance 
+       FROM liaison, secteur, port P1, port P2
+       WHERE liaison.idSecteur = secteur.code
+       AND liaison.portArr = P1.id
+       AND liaison.portDep = P2.id
+       ORDER BY nomSecteur ASC");
+       $reqAffich->execute();
+       $affichage = $reqAffich->fetch();
+       $reqAffich->execute();
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -80,21 +97,54 @@
                         <div class="tab-content">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label class="lblLaison" for="tableTarif">Liaisons :</label>
-                                    <div class="form-field">
-                                        <select name="TableTarif" id="TableTarif" class="form-control">
-                                            
-                                        </select>
+                                    <div class="liaisonBlock">
+                                        <label class="lblLiaison" for="tableTarif">Liaisons :</label>
+                                        <div class="form-field">
+                                                <?php
+                                                echo '<select name="secteur" class="form-control pro-edt-select form-control-primary">
+                                                <option value="'.NULL.'">Veuillez choisir un secteur</option>';
+                                                $liaisonPrec = $liaisonReq['nomSecteur'];
+                                                    while($liaisonReq = $reqAffich->fetch()) {     
+                                                        if($liaisonPrec == $liaisonReq['nomSecteur']){
+                                                            echo "<option value='".$liaisonReq['idLiaison']."'>".$liaisonReq['portDep']." - ".$liaisonReq['portArr']."</option>";
+
+                                                        }else{
+                                                            echo "<option disabled value='NULL'>".$liaisonReq['nomSecteur']."</option>";
+                                                            echo "<option value='".$liaisonReq['idLiaison']."'>".$liaisonReq['portDep']." - ".$liaisonReq['portArr']."</option>";
+                                                        }
+                                                        $liaisonPrec = $liaisonReq['nomSecteur'];
+                                                    }
+                                                echo '</select>';
+                                            ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label class="lblDate" for="tableTarif">Date :</label>
-                                    <div class="form-field">
-                                        <select name="TableTarif" id="TableTarif" class="form-control">
-                                            
-                                        </select>
+                                    <div class="dateBlock">
+                                        <label class="lblDate" for="tableTarif">Date :</label>
+                                        <div class="form-field">
+                                            <?php
+                                            echo '<input type="date" id="dateDepart" class="form-control" placeholder="Date de départ">';
+                                            ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="buttonBlock">
+                                        <?php
+                                        echo '<input type="submit" value="Afficher les tarifs" id="btnAfficher" name="btnAfficher" class="form-control">';
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="ResultBlock">
+                                        <!-- <label class="lblResult"><?php echo htmlspecialchars($_POST['nomSecteur']); ?></label> -->
                                     </div>
                                 </div>
                             </div>
@@ -112,9 +162,9 @@
                                     <tr>
                                         <th scope="row">1</th>
                                         <td>A : Passager</td>
-                                        <td>A1 : </td>
-                                        <td>A2 : </td>
-                                        <td>A3 : </td>
+                                        <td>A1 : Adulte</td>
+                                        <td>A2 : Junior 8 à 17</td>
+                                        <td>A3 : Enfant 0 à 7</td>
                                     </tr>
                                     <tr>
                                         <th scope="row">2</th>
