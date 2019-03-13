@@ -456,6 +456,30 @@ h1, h2, h3, h4, h5, h6, figure {
   .bg-primary-color p {
     color: #fff !important; }
 
+/* Table tarif */
+
+.lblLaison {
+    margin-top: 30px;
+}
+
+.table-dark {
+    display: block;
+    background: #2C2E3E
+}
+
+#colorlib-tarif .tab-content {
+    background: #2C2E3E;
+    padding: 30px 60px;
+    display: block;
+}
+
+#colorlib-tarif .nav-tabs li.active {
+    color: #fff !important !important;
+    background: #2C2E3E !important; 
+}
+
+/* Table réservation */
+
 #colorlib-reservation {
   clear: both;
   z-index: 1; }
