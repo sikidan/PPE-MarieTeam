@@ -1,3 +1,15 @@
+<?php
+		$bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
+
+    //requete pour affichage des differentes liaisons
+    $reqAffich = $bdd->prepare("SELECT secteur.nom nomSecteur, P1.nom portArr, P2.nom portDep, liaison.code idLiaison
+    FROM liaison, secteur, port P1, port P2
+    WHERE liaison.idSecteur = secteur.code
+    AND liaison.portArr = P1.id
+    AND liaison.portDep = P2.id
+    ORDER BY nomSecteur ASC");
+    $reqAffich->execute();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -222,9 +234,24 @@
 				              	<div class="row">
 				              	 <div class="col-md-3">
 				              	 	<div class="form-group">
-				                    <label for="portDepart">Port de départ</label>
+				                    <label for="liaison">Nos liaisons</label>
 				                    <div class="form-field">
-				                      <input type="text" id="portDepart" class="form-control" placeholder="D'ou partez-vous ?">
+														<?php
+															echo '<select name="secteur" class="form-control pro-edt-select form-control-primary">
+															<option value="'.NULL.'">Veuillez choisir un secteur</option>';
+															$liaisonPrec = $liaisonReq['nomSecteur'];
+																while($liaisonReq = $reqAffich->fetch()) {     
+																	if($liaisonPrec == $liaisonReq['nomSecteur']){
+																		echo "<option value='".$liaisonReq['idLiaison']."'>".$liaisonReq['portDep']." - ".$liaisonReq['portArr']."</option>";
+																		
+																	}else{
+																		echo "<option disabled value='NULL'>".$liaisonReq['nomSecteur']."</option>";
+																		echo "<option value='".$liaisonReq['idLiaison']."'>".$liaisonReq['portDep']." - ".$liaisonReq['portArr']."</option>";
+																	}
+																	$liaisonPrec = $liaisonReq['nomSecteur'];
+																}
+															echo '</select>';
+														?>
 				                    </div>
 				                  </div>
 				              	 </div>
@@ -233,7 +260,7 @@
 				                    <label for="dateDepart">Date de départ</label>
 				                    <div class="form-field">
 				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="datetDepart" class="form-control date" placeholder="Date de départ">
+				                      <input type="date" id="datetDepart" class="form-control" placeholder="Date de départ">
 				                    </div>
 				                  </div>
 				                </div>
@@ -302,7 +329,7 @@
 				                    <label for="date">Date d'arrivée</label>
 				                    <div class="form-field">
 				                      <i class="icon icon-calendar2"></i>
-				                      <input type="text" id="date" class="form-control date" placeholder="Date d'arrivée">
+				                      <input type="date" id="date" class="form-control" placeholder="Date d'arrivée">
 				                    </div>
 				                  </div>
 												</div>
