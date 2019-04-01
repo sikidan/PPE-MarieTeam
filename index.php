@@ -236,6 +236,7 @@
 				              	 	<div class="form-group">
 				                    <label for="liaison">Nos liaisons</label>
 				                    <div class="form-field">
+														<i class="icon icon-arrow-down3"></i>
 														<?php
 															echo '<select name="secteur" class="form-control pro-edt-select form-control-primary">
 															<option value="'.NULL.'">Veuillez choisir un secteur</option>';
@@ -264,65 +265,32 @@
 				                    </div>
 				                  </div>
 				                </div>
-				                <div class="col-md-2">
+				                <div class="col-md-3">
 				                  <div class="form-group">
 				                    <label for="adultes">Combien d'adulte(s)</label>
 				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="adultes" id="adultes" class="form-control">
-										<option value="" selected disabled hidden>Choisisez un chiffre</option>
-				                        <option value="#">1</option>
-				                        <option value="#">2</option>
-				                        <option value="#">3</option>
-				                        <option value="#">4</option>
-				                        <option value="#">5+</option>
-				                      </select>
+														<input type="text" id="adultes" class="form-control" placeholder="Nombres d'adultes">
 				                    </div>
 				                  </div>
 				                </div>
-								<div class="col-md-2">
+								<div class="col-md-3">
 				                  <div class="form-group">
 				                    <label for="ados">d'adolescent(s)</label>
 				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="ados" id="ados" class="form-control">
-										<option value="" selected disabled hidden>Choisisez un chiffre</option>
-										<option value="#">0</option>
-				                        <option value="#">1</option>
-				                        <option value="#">2</option>
-				                        <option value="#">3</option>
-				                        <option value="#">4</option>
-				                        <option value="#">5+</option>
-				                      </select>
-				                    </div>
-				                  </div>
-				                </div>
-								<div class="col-md-2">
-				                  <div class="form-group">
-				                    <label for="enfants">d'enfant(s)</label>
-				                    <div class="form-field">
-				                      <i class="icon icon-arrow-down3"></i>
-				                      <select name="enfants" id="enfants" class="form-control">
-										<option value="" selected disabled hidden>Choisisez un chiffre</option>
-				                        <option value="#">0</option>
-										<option value="#">1</option>
-				                        <option value="#">2</option>
-				                        <option value="#">3</option>
-				                        <option value="#">4</option>
-				                        <option value="#">5+</option>
-				                      </select>
+				                      <input type="text" id="ados" class="form-control" placeholder="Nombres d'adolescents">
 				                    </div>
 				                  </div>
 				                </div>
 								</div>
 								<div class="row">
 								<div class="col-md-3">
-				              	 	<div class="form-group">
-				                    <label for="date">Port d'arrivée</label>
-				                    <div class="form-field">
-				                      <input type="text" id="location" class="form-control" placeholder="Ou allez-vous ?">
-				                    </div>
-				                  </div>
+								<div class="form-group">
+														<label for="radio-inline">Vous avez un véhicule ?</label>
+														<div class="form-field">
+														<label>Non</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="0" checked>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														<label>Oui</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="1">
+														</div>
+													</div>
 				              	 </div>
 				                <div class="col-md-2">
 				                  <div class="form-group">
@@ -333,17 +301,17 @@
 				                    </div>
 				                  </div>
 												</div>
-												<div class="col-md-2">
-														<div class="form-group">
-														<label for="radio-inline">Vous avez un véhicule ?</label>
-														<div class="form-field">
-														<label>Non</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="0" checked>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-														<label>Oui</label>&nbsp;&nbsp;&nbsp;<input type="radio" class="radio-inline" name="vehiculeBool" value="1">
-														</div>
-													</div>
-													</div>	
+												<div class="col-md-3">
+				                  <div class="form-group">
+				                    <label for="enfants">d'enfant(s)</label>
+				                    <div class="form-field">
+															<input type="text" id="enfants" class="form-control" placeholder="Nombres d'enfants">
+				                    </div>
+				                  </div>
+				                </div>
+												
 								
-				                <div class="col-md-4">
+				                <div class="col-md-3">
 				                  <input type="submit" name="submit" id="submit" value="Rechercher" class="btn btn-primary btn-block">
 				                </div>
 								</div>

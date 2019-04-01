@@ -93,7 +93,7 @@ session_start();
 			<div class="container">
             <?php if(array_key_exists('errors',$_SESSION)): ?>
             <div class="alert alert-danger">
-              Votre email n'a pas été transmis !
+              <?= implode('<br>', $_SESSION['errors']); ?>
               </div>
               <?php endif; ?>
               <?php if(array_key_exists('success',$_SESSION)): ?>
@@ -109,32 +109,32 @@ session_start();
 							<div class="row form-group">
 								<div class="col-md-6 padding-bottom">
 									<label for="inputprenom">Prénom</label>
-									<input type="text" name="prenom" class="form-control" placeholder="Votre prénom" value="">
+									<input type="text" id="inputprenom" name="prenom" class="form-control" placeholder="Votre prénom" value="<?php echo isset($_SESSION['inputs']['prenom'])? $_SESSION['inputs']['prenom'] : ''; ?>">
 								</div>
 								<div class="col-md-6">
 									<label for="inputnom">Nom</label>
-									<input type="text" name="nom" class="form-control" placeholder="Votre nom" value="">
+									<input type="text" id="inputnom" name="nom" class="form-control" placeholder="Votre nom" value="<?php echo isset($_SESSION['inputs']['nom'])? $_SESSION['inputs']['nom'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="inputemail">Email</label>
-									<input type="text" name="email" class="form-control" placeholder="Votre adresse mail" value="">
+									<input type="text" id="inputemail" name="email" class="form-control" placeholder="Votre adresse mail" value="<?php echo isset($_SESSION['inputs']['email'])? $_SESSION['inputs']['email'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="inputsujet">Sujet</label>
-									<input type="text" name="sujet" class="form-control" placeholder="Le sujet de votre message" value="">
+									<input type="text" id="inputsujet" name="sujet" class="form-control" placeholder="Le sujet de votre message" value="<?php echo isset($_SESSION['inputs']['sujet'])? $_SESSION['inputs']['sujet'] : ''; ?>">
 								</div>
 							</div>
 
 							<div class="row form-group">
 								<div class="col-md-12">
 									<label for="inputmessage">Message</label>
-									<textarea name="message" cols="30" rows="10" class="form-control" placeholder="Que voullez vous nous dire ?" value=""></textarea>
+									<textarea name="message" id="inputmessage" cols="30" rows="10" class="form-control" placeholder="Que voullez vous nous dire ?" value="<?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?>"></textarea>
 								</div>
 							</div>
 							<div class="form-group text-center">

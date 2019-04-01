@@ -87,12 +87,6 @@ if (isset($_SESSION['id'])) {
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<div class="review-content-section">
 					<?php
-						
-						
-								
-								/* $reqAjoutPort = $bdd->prepare("SELECT * FROM port");
-								$reqAjoutPort->execute(); */
-								
 								echo '<select name="secteur" class="form-control pro-edt-select form-control-primary">
 									<option value="'.NULL.'">Veuillez choisir un secteur</option>';
 										while($ajoutSecteur = $reqAjoutSecteur->fetch()) {                                            
