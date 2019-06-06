@@ -1,9 +1,8 @@
-<?php 
+<?php
 
-    $bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=marieteam', 'marieteam', 'marieteam');
 
-    //requete pour affichage des differentes liaisons
-       $reqAffich = $bdd->prepare("SELECT secteur.nom nomSecteur, P1.nom portArr, P2.nom portDep, liaison.code idLiaison, liaison.distance 
+$reqAffich = $bdd->prepare("SELECT secteur.nom nomSecteur, P1.nom portArr, P2.nom portDep, liaison.code idLiaison, liaison.distance 
        FROM liaison, secteur, port P1, port P2
        WHERE liaison.idSecteur = secteur.code
        AND liaison.portArr = P1.id
@@ -12,10 +11,8 @@
        $reqAffich->execute();
        $affichage = $reqAffich->fetch();
        $reqAffich->execute();
-
 ?>
 
-<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -40,10 +37,8 @@
 		<link rel="stylesheet" href="css/animate.css">
 		<!-- Icomoon Icon Fonts-->
 		<link rel="stylesheet" href="css/icomoon.css">
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Bootstrap JS -->
-        <link rel="stylesheet" href="js/bootstrap.min.js">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<!-- Magnific Popup -->
 		<link rel="stylesheet" href="css/magnific-popup.css">
 		<!-- Flexslider  -->
@@ -89,8 +84,8 @@
 					</div>
 				</div>
 			</aside>
-            
-            <!-- Corps de la page -->
+			<div id="colorlib-reservation">
+				<!-- Corps de la page -->
             <div id="colorlib-tarif">
                 <div class="container">
                     <div class="search-wrap">
@@ -151,38 +146,22 @@
                             
                             <table class="table table-dark">
                                 <thead>
-                                    <tr>
-                                        <th scope="col"></th>
-                                        <th scope="col">Catégorie</th>
-                                        <th scope="col">Type</th>
-                                        <th scope="col">Période</th>
-                                    </tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>A : Passager</td>
-                                        <td>A1 : Adulte</td>
-                                        <td>A2 : Junior 8 à 17</td>
-                                        <td>A3 : Enfant 0 à 7</td>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">2</th>
-                                        <td>B : Véhicule inférieur à 2m</td>
-                                        <td rowspan="2">C1 : Fourgon</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>C : Véhicule supérieur à 2m</td>
-                                        <td rowspan="2">C2 : Camping-car</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td></td>
-                                        <td rowspan="2">C3 : Camion</td>
-                                        <td></td>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                        <td>Cell 4</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -190,7 +169,6 @@
                     </div>
                 </div>
             </div>
-                
             <!-- appel du footer -->
             <?php                                            
             include("footer.php");                                        

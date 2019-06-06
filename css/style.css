@@ -456,7 +456,24 @@ h1, h2, h3, h4, h5, h6, figure {
   .bg-primary-color p {
     color: #fff !important; }
 
-#colorlib-reservation {
+/* Table tarif */
+
+.tab-content {
+    align-content: center;
+}
+
+#colorlib-tarif  {
+    width: 100%;
+    float: left;
+    display: block;
+    position: relative;
+    min-height: 100%;
+}
+
+/* Table réservation */
+
+
+#colorlib-resevation {
   clear: both;
   z-index: 1; }
   #colorlib-reservation .search-wrap {
@@ -560,7 +577,7 @@ h1, h2, h3, h4, h5, h6, figure {
   resize: vertical; }
 
 .colorlib-form .btn-block {
-  margin-top: 28px;
+  margin-top: 28px
   padding: 12px !important;
   font-size: 14px;
   color: #000; }
